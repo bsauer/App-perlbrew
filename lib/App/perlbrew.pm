@@ -914,7 +914,7 @@ sub do_extract_tarball {
     # installed as 'gtar' - RT #61042
     my $tarx =
         ($^O eq 'solaris' ? 'gtar ' : 'tar ') .
-        ( $dist_tarball =~ m/bz2$/ ? 'xjf' : 'xzf' );
+        ( $dist_tarball =~ m/bz2$/ ? 'xzf' : 'xzf' );
 
     if (-d $extracted_dir) {
         rmpath($extracted_dir);
